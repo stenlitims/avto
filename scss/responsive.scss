@@ -1,0 +1,82 @@
+@media screen and (max-width: 90em) {}
+@media screen and (max-width: 80em) {
+    .big-image .text {
+        font-size: 80px;
+        right: 40px;
+    }
+}
+@media screen and (max-width: 70em) {
+    .big-image .text {
+        font-size: 70px;
+        right: 30px;
+    }
+}
+@media screen and (max-width: 60em) {
+    .big-image .text {
+        font-size: 60px;
+        top: 40px;
+    }
+}
+@media screen and (max-width: 50em) {
+    .big-image .text {
+        font-size: 50px;
+        top: 30px;
+    }
+}
+@media screen and (max-width: 40em) {
+    .big-image .text {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 30em) {
+    .big-image .text {
+        font-size: 30px;
+        top: 20px;
+        right: 20px;
+    }
+}
+@media all and (max-width: 1200px) and (min-width: 768px) {}
+@media (min-width: 1500px) {
+    .home {}
+}
+@media (max-width: 1400px) {}
+@media (max-width: 1280px) {}
+@media (max-width: 1200px) {
+    .top-contact-item {
+        margin: 0 5%;
+    }
+}
+@media (max-width: 992px) {
+    .logo{
+        max-width: 390px;
+        margin: 0 auto 20px;
+    }
+    .top-contact{
+        text-align: center;
+    }
+    .container-fluid{
+        padding: 0 15px;
+    }
+    .main-nav > ul > li{
+        margin: 0 10px;
+    }
+    .consult-block{
+        text-align: center;
+        p{
+            margin-bottom: 20px;
+        }
+        .phones{
+            margin: 0;
+        }
+    }
+    .contact-block{
+        margin: 50px auto;
+        .heading{
+            text-align: center;
+        }
+    }
+    .container-fluid .map-wrap{
+        margin: 0 -15px;
+    }
+}
+@media (max-width: 768px) {}
