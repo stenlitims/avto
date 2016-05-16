@@ -29,15 +29,18 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="logo">
-                            <a href="#" class="clearfix">
-                                <span class="img">
-                                <img src="images/logo-volvo.png" alt="">
-                               </span>
-                                <span class="t">
-                                  <span class="t1">АВТОМАКСИМУМ Volvo </span>
-                                <span class="t2">Технические центры в Москве</span>
-                                </span>
-                            </a>
+                            <div class="clearfix">
+                                <a href="#" class="img">
+                                    <img src="images/logo-volvo.png" alt="">
+                                </a>
+                                <div class="t">
+                                    <div class="t1">АВТОМАКСИМУМ Volvo </div>
+                                    <div class="t2">Технические центры в Москве</div>
+                                    <div class="t3 visible-xs-block">
+                                        Авиамоторная, Волоколамская
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -88,7 +91,7 @@
                             <li><a href="#">СХЕМА ПРОЕЗДА</a></li>
                         </ul>
                         <div class="r-btn">
-                            <a href="#" class="btn btn-line">ОБРАТНЫЙ ЗВОНОК</a>
+                            <a href="" class="btn btn-line" data-toggle="modal" data-target="#call">ОБРАТНЫЙ ЗВОНОК</a>
                         </div>
                     </div>
                 </div>
@@ -165,7 +168,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="title">Консультация мастера</div>
+                        <div class="heading">Консультация мастера</div>
                         <p>Мастера-консультанты техцентра «АвтоМаксимум» с радостью ответят на все ваши вопросы относительно ремонта и обслуживания VOLVO</p>
                     </div>
                     <div class="col-md-6">
@@ -228,9 +231,9 @@
         </div>
 
 
-        <div class="container-fluid">
+        <div class="container-fluid full">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7 col-lg-8">
 
                     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
                     <script type="text/javascript">
@@ -284,8 +287,8 @@
                                 createIco(itemsDetector[j]);
                             }
 
-                            $(document).on('click', '.adr-list a', function() {
-                                $('.adr-list a').removeClass('active');
+                            $(document).on('click', '.js-adr-list a', function() {
+                                $('.js-adr-list a').removeClass('active');
                                 $(this).addClass('active');
                                 var id = $(this).data('id');
                                 placemark[id].balloon.open();
@@ -314,10 +317,10 @@
 
 
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 col-lg-4">
                     <div class="contact-block">
                         <div class="heading">Записаться в технический центр </div>
-                        <div class="adr-list clerfix">
+                        <div class="adr-list js-adr-list clerfix">
                             <a href="#" data-id="1" class="active">
                                 <span class="title">АВИАМОТОРНАЯ</span>
                                 <span class="text">Дворникова, 7 <br> с 8:00 до 20:00</span>
@@ -392,6 +395,40 @@
         </footer>
 
     </div>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="call">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-close"></span></button>
+                <div class="modal-body">
+                    <div class="modal-title">Заказать обратный звонок</div>
+                    <div class="call-wrap">
+                        <div class="adr-list js-modal-adr clerfix">
+                            <a href="#" data-id="1" class="active">
+                                <span class="title">АВИАМОТОРНАЯ</span>
+                                <span class="text">Дворникова, 7 <br> с 8:00 до 20:00</span>
+                            </a>
+                            <a href="#" data-id="2">
+                                <span class="title">ВОЛОКОЛАМСКАЯ</span>
+                                <span class="text">Василия Петушкова, 3 <br> с 8:00 до 20:00</span>
+                            </a>
+                        </div>
+                        <form action="" class="form-s">
+                            <div class="form-group">
+                                <input type="text" placeholder="Фамилия Имя" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Телефон" class="form-control">
+                            </div>
+                            <button class="btn btn-def">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 

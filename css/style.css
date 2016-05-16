@@ -24,6 +24,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-close:before {
+  content: "\e90c"; }
+
 .icon-route_bus:before {
   content: "\e908"; }
 
@@ -78,6 +81,10 @@ body {
 a {
   color: #183b84; }
 
+button,
+a {
+  outline: none !important; }
+
 a:active,
 a:focus {
   text-decoration: none; }
@@ -108,7 +115,12 @@ a:focus {
   z-index: 1; }
 
 .container-fluid {
-  padding: 0 40px; }
+  padding: 0 40px;
+  max-width: 1640px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container-fluid.full {
+    max-width: 2000px; }
 
 .logo a {
   display: block; }
@@ -127,13 +139,13 @@ a:focus {
 
 .logo .t1 {
   font-family: 'VolvoBroadSmallWeb';
-  font-size: 43px;
+  font-size: 48px;
   line-height: 1;
   color: #092561;
   margin-bottom: 8px; }
 
 .logo .t2 {
-  font-size: 18px;
+  font-size: 21px;
   color: #7587a1; }
 
 .top-contact {
@@ -144,7 +156,7 @@ a:focus {
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  margin: 0 10%; }
+  margin: 0 4%; }
   .top-contact-item:last-child {
     margin-right: 0; }
   .top-contact-item .title {
@@ -161,7 +173,7 @@ a:focus {
     color: #133680; }
 
 .main-nav-wrap {
-  margin-top: 35px;
+  margin-top: 29px;
   background-color: #fdfdfd;
   border: solid 1px #f0f3f7;
   position: relative; }
@@ -260,8 +272,10 @@ a.btn-line:hover,
     box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06);
     pointer-events: none; }
   .sub-nav ul {
-    max-width: 1200px;
+    max-width: 1560px;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     list-style: none;
     border-right: solid 1px #f0f3f7; }
@@ -291,21 +305,22 @@ a.btn-line:hover,
       position: relative;
       z-index: 1;
       display: block;
-      padding-top: 89px;
       transform: translate(0px, 0px);
       transition: transform 0.2s ease-in-out; }
     .sub-nav a .ico {
-      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 31px;
+      display: block;
       background-repeat: no-repeat;
       background-position: center 19px;
       text-align: center;
       line-height: 1;
       font-size: 50px;
       color: #A9B4C5;
+      margin-bottom: 17px;
+      padding-top: 2px;
       vertical-align: middle; }
       .sub-nav a .ico i {
         margin-top: 18px;
@@ -347,7 +362,6 @@ a.btn-line:hover,
     box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06);
     pointer-events: none; }
   .big-image .img {
-    max-width: 1400px;
     margin: 0 auto;
     position: relative; }
     .big-image .img img {
@@ -375,13 +389,13 @@ a.btn-line:hover,
     border-bottom: solid 1px #f0f3f7; }
 
 .list-car-grag {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
   .list-car-grag .item {
     position: relative;
     text-align: left;
     display: inline-block;
     vertical-align: bottom;
-    height: 80px;
     margin-bottom: 40px; }
     .list-car-grag .item .text {
       position: absolute;
@@ -411,10 +425,9 @@ a.btn-line:hover,
   line-height: 1.3;
   font-weight: 300;
   margin-bottom: 56px; }
-  .consult-block .title {
-    font-family: VolvoBroadSmallWeb;
-    font-size: 28px;
-    margin-bottom: 16px; }
+  .consult-block .heading {
+    margin-bottom: 16px;
+    color: #fff; }
   .consult-block p {
     margin-bottom: 0; }
   .consult-block .phones {
@@ -428,7 +441,8 @@ a.btn-line:hover,
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    float: right; }
 
 .list-service-info {
   margin-bottom: 80px; }
@@ -591,6 +605,60 @@ ymaps {
     .footer-contact .item .phone {
       font-size: 15px; }
 
+.modal .modal-title {
+  font-size: 43px;
+  color: #092561;
+  font-family: VolvoBroadSmallWeb;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px; }
+
+.modal .modal-body {
+  padding: 30px; }
+
+.modal .modal-content {
+  border-radius: 2px;
+  border: none; }
+
+.modal .call-wrap {
+  max-width: 340px;
+  margin: 0 auto 30px; }
+
+.modal .adr-list a {
+  padding-right: 3px; }
+
+.modal .close {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  float: none;
+  z-index: 1;
+  font-size: 14px;
+  opacity: 1;
+  color: #A4B0C1; }
+
+#call .modal-dialog {
+  max-width: 468px;
+  width: inherit; }
+
+@media screen and (max-width: 120em) {
+  .big-image .text {
+    font-size: 120px;
+    top: 60px;
+    right: 60px; } }
+
+@media screen and (max-width: 110em) {
+  .big-image .text {
+    font-size: 110px; } }
+
+@media screen and (max-width: 100em) {
+  .big-image .text {
+    font-size: 100px; } }
+
+@media screen and (max-width: 90em) {
+  .big-image .text {
+    font-size: 90px; } }
+
 @media screen and (max-width: 80em) {
   .big-image .text {
     font-size: 80px;
@@ -621,13 +689,45 @@ ymaps {
     top: 20px;
     right: 20px; } }
 
+@media (min-width: 1400px) {
+  .sub-nav a {
+    font-size: 16px;
+    height: 160px; }
+    .sub-nav a .ico {
+      font-size: 70px;
+      padding-top: 10px; }
+  .list-service-info .item .ico {
+    font-size: 100px; }
+  .list-service-info .item .text {
+    padding-top: 35px;
+    font-size: 20px;
+    max-width: 213px !important; }
+  .heading {
+    font-size: 38px; }
+  .consult-block {
+    font-size: 20px; }
+    .consult-block .phones {
+      font-size: 50px; }
+    .consult-block .btn {
+      font-size: 24px;
+      margin-top: 36px; }
+    .consult-block p {
+      max-width: 600px; }
+  .list-car-grag .item img {
+    height: 100px; }
+  .list-car-grag .item .text .big {
+    font-size: 36px; }
+  .list-car-grag .item .text .sm {
+    top: -3px;
+    font-size: 12px; } }
+
 @media (max-width: 1200px) {
   .top-contact-item {
     margin: 0 5%; } }
 
 @media (max-width: 992px) {
   .logo {
-    max-width: 390px;
+    max-width: 430px;
     margin: 0 auto 20px; }
   .top-contact {
     text-align: center; }
@@ -638,14 +738,41 @@ ymaps {
   .consult-block {
     text-align: center; }
     .consult-block p {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto; }
     .consult-block .phones {
       margin: 0; }
+    .consult-block .btn {
+      float: none; }
   .contact-block {
     margin: 50px auto; }
     .contact-block .heading {
       text-align: center; }
   .container-fluid .map-wrap {
     margin: 0 -15px; } }
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 0; }
+  .logo {
+    padding-top: 23px;
+    margin: 0; }
+    .logo .img {
+      width: 70px; }
+      .logo .img img {
+        width: 100%; }
+    .logo .t {
+      margin-left: 90px; }
+    .logo .t1 {
+      font-size: 26px;
+      margin-bottom: 2px; }
+    .logo .t2 {
+      font-size: 14px; }
+    .logo .t3 {
+      color: #062f58; }
+  .top-contact {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
