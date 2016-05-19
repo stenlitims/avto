@@ -1,70 +1,137 @@
 @media screen and (max-width: 120em) {
-    .big-image .text {
-        font-size: 120px;
-        top: 60px;
-        right: 60px;
+    .big-image {
+        .text {
+            font-size: 120px;
+            top: 70px;
+            right: 60px;
+        }
+        .img {
+            height: 650px;
+        }
     }
 }
 @media screen and (max-width: 110em) {
-    .big-image .text {
-        font-size: 110px;
+    .big-image {
+        .text {
+            font-size: 110px;
+        }
+        .img {
+            height: 600px;
+        }
     }
 }
 @media screen and (max-width: 100em) {
-    .big-image .text {
-        font-size: 100px;
+    .big-image {
+        .text {
+            font-size: 100px;
+        }
+        .img {
+            height: 550px;
+        }
     }
 }
 @media screen and (max-width: 90em) {
-    .big-image .text {
-        font-size: 90px;
+    .big-image {
+        .text {
+            font-size: 90px;
+        }
+        .img {
+            height: 500px;
+        }
     }
 }
 @media screen and (max-width: 80em) {
-    .big-image .text {
-        font-size: 80px;
-        right: 40px;
+    .big-image {
+        .text {
+            font-size: 80px;
+        }
+        .img {
+            height: 450px;
+        }
     }
 }
 @media screen and (max-width: 70em) {
-    .big-image .text {
-        font-size: 70px;
-        right: 30px;
+    .big-image {
+        .text {
+            font-size: 70px;
+            top: 60px;
+            right: 30px;
+        }
+        .img {
+            height: 400px;
+        }
     }
 }
 @media screen and (max-width: 60em) {
-    .big-image .text {
-        font-size: 60px;
-        top: 40px;
+    .big-image {
+        .text {
+            font-size: 60px;
+            right: 25px;
+            top: 50px;
+        }
+        .img {
+            height: 350px;
+        }
     }
 }
 @media screen and (max-width: 50em) {
-    .big-image .text {
-        font-size: 50px;
-        top: 30px;
+    .big-image {
+        .text {
+            font-size: 50px;
+            right: 20px;
+            top: 40px;
+        }
+        .img {
+            height: 300px;
+        }
     }
 }
 @media screen and (max-width: 40em) {
-    .big-image .text {
-        font-size: 40px;
+    .big-image {
+        .text {
+            font-size: 40px;
+            right: 20px;
+            top: 35px;
+        }
+        .img {
+            height: 250px;
+        }
     }
 }
 @media screen and (max-width: 30em) {
-    .big-image .text {
-        font-size: 30px;
-        top: 20px;
-        right: 20px;
+    .big-image {
+        .text {
+            font-size: 36px;
+            right: 15px;
+            top: 25px;
+        }
+        .img {
+            height: 180px;
+        }
+    }
+}
+@media screen and (max-width: 20em) {
+    .big-image {
+        .text {
+            font-size: 30px;
+        }
+        .img {
+            height: 150px;
+        }
     }
 }
 @media all and (max-width: 1200px) and (min-width: 768px) {}
 @media (min-width: 1400px) {
+    .consult-block{
+        padding: 100px 0;
+    }
     .sub-nav {
         a {
             font-size: 16px;
             height: 160px;
             .ico {
                 font-size: 70px;
-                padding-top: 10px;
+                padding-top: 15px;
             }
         }
     }
@@ -112,6 +179,18 @@
             }
         }
     }
+    .text-inner {
+        font-size: 18px;
+        line-height: 1.4;
+        p {
+            margin-bottom: 26px;
+        }
+    }
+    .inner-page {
+        .r-sidebar {
+            padding-left: 100px;
+        }
+    }
 }
 @media (max-width: 1400px) {}
 @media (max-width: 1280px) {}
@@ -119,10 +198,16 @@
     .top-contact-item {
         margin: 0 5%;
     }
+    .footer-contact .item .title{
+        font-size: 20px;
+    }
+    .footer-nav ul li{
+        font-size: 18px;
+    }
 }
 @media (max-width: 992px) {
     .logo {
-        max-width: 430px;
+        max-width: 436px;
         margin: 0 auto 20px;
     }
     .top-contact {
@@ -158,10 +243,103 @@
     .container-fluid .map-wrap {
         margin: 0 -15px;
     }
+    .footer {
+        .footer-nav {
+            ul {}
+            li {
+                font-size: 14px;
+                margin: 0 10px;
+                a {
+                    &:hover {}
+                }
+            }
+        }
+        .footer-logo {
+            .title {}
+            .text span {
+                display: block;
+            }
+        }
+        .img {
+            &:hover {}
+        }
+        img {}
+        .text {}
+        span {}
+        .footer-contact {}
+        .item {
+            .title {}
+        }
+        .phone {}
+    }
+    .sub-nav,
+    .service-nav {
+        li {
+            width: 25%;
+            overflow: hidden;
+            a {
+                border-top: solid 1px #f0f3f7;
+            }
+        }
+    }
+    .inner-page {
+        .r-sidebar {
+            padding-left: 15px;
+        }
+    }
+    .r-sidebar {
+        margin-top: 50px;
+    }
+    .r-img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        img {}
+    }
+    .r-nav {
+        display: none;
+    }
 }
-@media (max-width: 768px) {
-    .header{
-        padding-top: 0; 
+@media (max-width: 767px) {
+    .mobile-nav {
+        border-top: solid 1px #f0f3f7;
+    }
+    .world-v-list {
+        padding-top: 0;
+    }
+    .sub-nav,
+    .service-nav {
+        li {
+            a {
+                height: inherit;
+                font-size: 12px;
+                .ico {
+                    font-size: 40px;
+                    margin-bottom: 8px;
+                    i {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .service-block {
+        margin-bottom: 20px;
+        .service-nav {
+            margin: 0 -16px;
+        }
+        .heading {
+            margin-bottom: 17px;
+        }
+    }
+    .header {
+        z-index: inherit;
+        position: static;
+        padding-top: 0;
+        margin-bottom: 20px;
+        &:before {
+            visibility: hidden;
+        }
     }
     .logo {
         padding-top: 23px;
@@ -186,7 +364,188 @@
             color: #062f58;
         }
     }
-    .top-contact{
+    .top-contact {
         display: none;
+    }
+    .main-nav-wrap {
+        position: fixed;
+        z-index: 998;
+        width: 76%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        border: none;
+        background-color: #062f58;
+        box-shadow: -10px 2px 4px 0 rgba(0, 0, 0, 0.34);
+        padding: 92px 30px 30px;
+        transform: translate(100%, 0);
+        transition: all .2s ease-in-out;
+        visibility: hidden;
+        &.active {
+            transform: translate(0, 0);
+            visibility: visible;
+        }
+        .container-fluid {
+            padding: 0;
+        }
+        .main-nav {
+            padding: 0;
+            ul {
+                padding: 0;
+                li {
+                    display: block;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    .fa {
+                        display: none;
+                    }
+                }
+                a {
+                    padding: 0;
+                    font-size: 24px;
+                    color: #fdfdfd;
+                    font-weight: normal;
+                    &:hover {}
+                }
+            }
+        }
+        .active {
+            a {
+                &:hover {}
+            }
+        }
+        .sub-nav {
+            display: none;
+        }
+    }
+    .r-btn {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 45px;
+        .btn {
+            display: block;
+        }
+    }
+    .close-nav {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        color: #fff;
+        font-size: 28px;
+    }
+    .call .modal-dialog {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+    .main-nav-wrap {
+        width: 50%;
+    }
+    .heading {
+        text-align: center;
+    }
+    .heading.line {
+        padding: 0;
+        border: none;
+    }
+    .consult-block {
+        padding: 32px 0;
+        .heading {}
+        .phones {
+            display: none;
+        }
+        .btn {
+            display: block;
+            padding: 10px 18px;
+            margin: 0 10px;
+            &:hover {}
+            &.btn-def {}
+        }
+    }
+    .list-service-info {
+        display: none;
+    }
+    .footer {
+        border: none;
+        padding: 20px 0;
+        > .container-fluid {
+            display: none;
+        }
+    }
+    .mob-footer {
+        padding: 0 15px;
+        font-size: 16px;
+        color: #b5beca;
+    }
+}
+@media (max-width: 480px) {
+    .zp-phone {
+        font-size: 18px;
+    }
+    .zp-form {
+        .btn {
+            display: block;
+            width: 100%;
+        }
+        .btn-send {
+            margin-top: 0;
+        }
+    }
+    .sub-nav,
+    .service-nav {
+        li {
+            a {
+                font-size: 11px;
+                .ico {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    .list-car-grag {
+        margin-left: -4px;
+        .item {
+            img {
+                height: 50px;
+            }
+            .text {
+                .big {
+                    font-size: 22px;
+                }
+                .sm {
+                    display: none;
+                }
+            }
+        }
+    }
+    .main-nav-wrap {
+        width: 80%;
+    }
+    .call .modal-dialog {
+        max-width: inherit;
+    }
+    .modal-dialog {
+        margin: 3px 3px 3px !important;
+    }
+    .modal {
+        .modal-body {
+            padding: 30px 15px 15px;
+        }
+        .modal-title {
+            font-size: 28px;
+        }
+    }
+    .adr-list {
+        a {
+            padding-left: 7px;
+        }
+        a .title {
+            font-size: 16px;
+        }
+        .text {
+            font-size: 13px;
+        }
     }
 }
