@@ -118,7 +118,7 @@ a:focus {
 
 .container-fluid {
   padding: 0 40px;
-  max-width: 1640px;
+  max-width: 1570px;
   margin-left: auto;
   margin-right: auto; }
   .container-fluid.full {
@@ -195,7 +195,7 @@ a:focus {
         margin-left: 0; }
       .main-nav > ul > li:last-child {
         margin-right: 0; }
-      .main-nav > ul > li:hover .sub-nav {
+      .main-nav > ul > li:hover .sub-nav, .main-nav > ul > li.activen .sub-nav {
         transform: translate(0, 0);
         visibility: visible;
         opacity: 1; }
@@ -403,9 +403,8 @@ a.btn-line:hover,
       display: block;
       max-width: 100%; }
   .big-image .text {
-    position: absolute;
-    top: 50px;
-    right: 46px;
+    margin-top: 60px;
+    margin-right: -15px;
     text-align: right;
     font-family: VolvoBroadSmallWeb;
     font-size: 90px;
@@ -434,7 +433,7 @@ a.btn-line:hover,
     transition: all 0.2s ease-in-out;
     margin-bottom: 40px; }
     .list-car-grag .item:hover {
-      transform: scale(1.1); }
+      transform: scale(1.04); }
     .list-car-grag .item .text {
       position: absolute;
       right: 0;
@@ -574,8 +573,19 @@ a.btn-line:hover,
     pointer-events: none;
     z-index: 2; }
 
-.container-fluid .map-wrap {
-  margin-left: -40px; }
+.map-wrap {
+  position: relative; }
+  .map-wrap .contact-block {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 15%;
+    width: 460px;
+    background: #fff;
+    height: 480px;
+    padding: 5px 35px;
+    z-index: 5;
+    box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.09), -5px 5px 3px 0 rgba(0, 0, 0, 0.09); }
 
 ymaps {
   font-family: 'Roboto Condensed', sans-serif; }
@@ -643,7 +653,7 @@ ymaps {
     vertical-align: top;
     font-weight: 300;
     text-align: left;
-    margin: 0 10%; }
+    margin: 0 4%; }
     .footer-contact .item:last-child {
       margin-right: 0; }
     .footer-contact .item .title {
@@ -769,6 +779,9 @@ h1,
   font-size: 38px;
   color: #2e3236;
   margin-bottom: 27px; }
+
+h1 {
+  margin-top: 0; }
 
 .text-inner {
   font-size: 15px;
@@ -911,11 +924,76 @@ h1,
 .form-control:focus::-webkit-input-placeholder {
   color: transparent; }
 
+#map2 {
+  width: 100%;
+  height: 430px; }
+
+.shema-map {
+  margin-bottom: 56px; }
+
+.shema-list {
+  margin-left: -30px;
+  margin-right: -30px; }
+  .shema-list [class^="col-"] {
+    padding-left: 30px;
+    padding-right: 30px; }
+  .shema-list .shema-item {
+    margin-bottom: 80px; }
+
+.shema-item .title {
+  font-size: 24px;
+  margin-bottom: 5px; }
+  .shema-item .title i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: #8A99AF; }
+
+.shema-item .contact {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 25px; }
+  .shema-item .contact span {
+    margin-right: 15px; }
+  .shema-item .contact .adr {
+    color: #2e3236; }
+  .shema-item .contact .time {
+    color: rgba(46, 50, 54, 0.75); }
+  .shema-item .contact .phone {
+    font-size: 17px;
+    color: #133680;
+    font-weight: 500; }
+
+.shema-item .map {
+  margin-bottom: 38px;
+  border: solid 1px #b5beca;
+  overflow: hidden; }
+
+.shema-item .h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 300; }
+  .shema-item .h2 i {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #8A99AF; }
+
+.modal-body .shema-item .btns {
+  visibility: hidden;
+  position: absolute; }
+
+.modal-body .shema-item .map {
+  display: block; }
+
+.modal-body .shema-item .text-inner {
+  display: block; }
+
+.left-content {
+  min-height: 400px; }
+
 @media screen and (max-width: 120em) {
   .big-image .text {
-    font-size: 120px;
-    top: 70px;
-    right: 60px; }
+    font-size: 110px;
+    margin-top: 70px; }
   .big-image .img {
     height: 650px; } }
 
@@ -927,23 +1005,24 @@ h1,
 
 @media screen and (max-width: 100em) {
   .big-image .text {
-    font-size: 100px; }
+    font-size: 100px;
+    margin-top: 70px; }
   .big-image .img {
     height: 550px; } }
-
-@media screen and (max-width: 90em) {
-  .big-image .text {
-    font-size: 90px; }
-  .big-image .img {
-    height: 500px; } }
 
 @media screen and (max-width: 80em) {
   .big-image .text {
     font-size: 80px; }
   .big-image .img {
-    height: 450px; } }
+    height: 500px; } }
 
 @media screen and (max-width: 70em) {
+  .big-image .text {
+    font-size: 80px; }
+  .big-image .img {
+    height: 450px; } }
+
+@media screen and (max-width: 60em) {
   .big-image .text {
     font-size: 70px;
     top: 60px;
@@ -954,8 +1033,7 @@ h1,
 @media screen and (max-width: 60em) {
   .big-image .text {
     font-size: 60px;
-    right: 25px;
-    top: 50px; }
+    margin: 60px -5px 0 0; }
   .big-image .img {
     height: 350px; } }
 
@@ -970,28 +1048,32 @@ h1,
 @media screen and (max-width: 40em) {
   .big-image .text {
     font-size: 40px;
-    right: 20px;
-    top: 35px; }
+    margin: 50px 0px 0 0; }
   .big-image .img {
     height: 250px; } }
 
 @media screen and (max-width: 30em) {
   .big-image .text {
     font-size: 36px;
-    right: 15px;
-    top: 25px; }
+    margin: 28px 0px 0 0; }
   .big-image .img {
     height: 180px; } }
 
 @media screen and (max-width: 20em) {
   .big-image .text {
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 28px 0px 0 0; }
   .big-image .img {
     height: 150px; } }
 
 @media (min-width: 1400px) {
   .consult-block {
-    padding: 100px 0; }
+    padding: 100px 0;
+    margin-bottom: 70px; }
+  .list-car-grag {
+    margin-bottom: 40px; }
+  .list-service-info {
+    margin-bottom: 100px; }
   .sub-nav a {
     font-size: 16px;
     height: 160px; }
@@ -1005,7 +1087,10 @@ h1,
     font-size: 20px;
     max-width: 213px !important; }
   .heading {
-    font-size: 38px; }
+    font-size: 38px;
+    margin-bottom: 43px; }
+    .heading.line {
+      padding-bottom: 25px; }
   .consult-block {
     font-size: 20px; }
     .consult-block .phones {
@@ -1016,7 +1101,7 @@ h1,
     .consult-block p {
       max-width: 600px; }
   .list-car-grag .item img {
-    height: 100px; }
+    height: 90px; }
   .list-car-grag .item .text .big {
     font-size: 36px; }
   .list-car-grag .item .text .sm {
@@ -1028,7 +1113,40 @@ h1,
     .text-inner p {
       margin-bottom: 26px; }
   .inner-page .r-sidebar {
-    padding-left: 100px; } }
+    padding-left: 100px; }
+  .top-contact-item .title {
+    font-size: 22px; }
+  .top-contact-item .text {
+    font-size: 17px; }
+  .top-contact-item .phone {
+    font-size: 18px; }
+  .main-nav .r-btn .btn {
+    font-size: 19px; }
+  .main-nav > ul > li > a {
+    font-size: 20px; }
+  .shema-item .title {
+    font-size: 32px;
+    margin-bottom: 7px; }
+    .shema-item .title i {
+      font-size: 26px; }
+  .shema-item .contact {
+    font-size: 20px;
+    margin-bottom: 32px; }
+    .shema-item .contact .phone {
+      font-size: 21px; }
+  .shema-item .map {
+    margin-bottom: 48px; }
+  .shema-item .h2 {
+    margin: 0 0 21px;
+    font-size: 32px; }
+    .shema-item .h2 i {
+      font-size: 26px;
+      width: 56px;
+      text-align: center; } }
+
+@media (max-width: 1400px) {
+  #map {
+    width: 70%; } }
 
 @media (max-width: 1200px) {
   .top-contact-item {
@@ -1059,10 +1177,8 @@ h1,
       margin: 0; }
     .consult-block .btn {
       float: none; }
-  .contact-block {
-    margin: 50px auto; }
-    .contact-block .heading {
-      text-align: center; }
+  .contact-block .heading {
+    text-align: center; }
   .container-fluid .map-wrap {
     margin: 0 -15px; }
   .footer .footer-nav li {
@@ -1086,9 +1202,22 @@ h1,
     margin-right: auto;
     max-width: 500px; }
   .r-nav {
-    display: none; } }
+    display: none; }
+  .left-content {
+    min-height: inherit; } }
 
 @media (max-width: 767px) {
+  .map-wrap #map {
+    width: 100%; }
+  .map-wrap .contact-block {
+    position: static;
+    max-width: 460px;
+    width: inherit;
+    margin: 0 auto;
+    height: inherit;
+    padding: 20px 15px;
+    margin: 50px 0;
+    box-shadow: none; }
   .mobile-nav {
     border-top: solid 1px #f0f3f7; }
   .world-v-list {
@@ -1214,9 +1343,37 @@ h1,
   .mob-footer {
     padding: 0 15px;
     font-size: 16px;
-    color: #b5beca; } }
+    color: #b5beca; }
+  .shema-item .contact {
+    margin-bottom: 20px; }
+    .shema-item .contact .phone {
+      font-size: 21px;
+      display: block;
+      margin-top: 4px; }
+  .shema-item .map {
+    display: none; }
+  .shema-item .text-inner {
+    display: none; }
+  .shema-item .btns .btn {
+    font-size: 15px; }
+    .shema-item .btns .btn:first-child {
+      margin-right: 5px; }
+  #map2 {
+    height: 230px; }
+  .shema-map {
+    margin-bottom: 36px; }
+  .shema-list .shema-item {
+    margin-bottom: 40px; } }
 
 @media (max-width: 480px) {
+  .modal-body .shema-item .phone {
+    display: none; }
+  .modal-body .shema-item .h2 {
+    font-size: 18px;
+    font-weight: 500; }
+    .modal-body .shema-item .h2 i {
+      font-size: 14px;
+      margin-right: 4px; }
   .zp-phone {
     font-size: 18px; }
   .zp-form .btn {

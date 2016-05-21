@@ -1,9 +1,8 @@
 @media screen and (max-width: 120em) {
     .big-image {
         .text {
-            font-size: 120px;
-            top: 70px;
-            right: 60px;
+            font-size: 110px;
+            margin-top: 70px;
         }
         .img {
             height: 650px;
@@ -24,19 +23,10 @@
     .big-image {
         .text {
             font-size: 100px;
+            margin-top: 70px;
         }
         .img {
             height: 550px;
-        }
-    }
-}
-@media screen and (max-width: 90em) {
-    .big-image {
-        .text {
-            font-size: 90px;
-        }
-        .img {
-            height: 500px;
         }
     }
 }
@@ -46,11 +36,21 @@
             font-size: 80px;
         }
         .img {
-            height: 450px;
+            height: 500px;
         }
     }
 }
 @media screen and (max-width: 70em) {
+    .big-image {
+        .text {
+            font-size: 80px;
+        }
+        .img {
+            height: 450px;
+        }
+    }
+}
+@media screen and (max-width: 60em) {
     .big-image {
         .text {
             font-size: 70px;
@@ -66,8 +66,7 @@
     .big-image {
         .text {
             font-size: 60px;
-            right: 25px;
-            top: 50px;
+            margin: 60px -5px 0 0;
         }
         .img {
             height: 350px;
@@ -90,8 +89,7 @@
     .big-image {
         .text {
             font-size: 40px;
-            right: 20px;
-            top: 35px;
+            margin: 50px 0px 0 0;
         }
         .img {
             height: 250px;
@@ -102,8 +100,7 @@
     .big-image {
         .text {
             font-size: 36px;
-            right: 15px;
-            top: 25px;
+            margin: 28px 0px 0 0;
         }
         .img {
             height: 180px;
@@ -114,6 +111,7 @@
     .big-image {
         .text {
             font-size: 30px;
+            margin: 28px 0px 0 0;
         }
         .img {
             height: 150px;
@@ -122,8 +120,15 @@
 }
 @media all and (max-width: 1200px) and (min-width: 768px) {}
 @media (min-width: 1400px) {
-    .consult-block{
+    .consult-block {
         padding: 100px 0;
+        margin-bottom: 70px;
+    }
+    .list-car-grag {
+        margin-bottom: 40px;
+    }
+    .list-service-info {
+        margin-bottom: 100px;
     }
     .sub-nav {
         a {
@@ -149,6 +154,10 @@
     }
     .heading {
         font-size: 38px;
+        margin-bottom: 43px;
+        &.line {
+            padding-bottom: 25px;
+        }
     }
     .consult-block {
         font-size: 20px;
@@ -166,7 +175,7 @@
     .list-car-grag {
         .item {
             img {
-                height: 100px;
+                height: 90px;
             }
             .text {
                 .big {
@@ -191,17 +200,66 @@
             padding-left: 100px;
         }
     }
+    .top-contact-item {
+        .title {
+            font-size: 22px;
+        }
+        .text {
+            font-size: 17px;
+        }
+        .phone {
+            font-size: 18px;
+        }
+    }
+    .main-nav .r-btn .btn {
+        font-size: 19px;
+    }
+    .main-nav > ul > li > a {
+        font-size: 20px;
+    }
+    .shema-item {
+        .title {
+            font-size: 32px;
+            margin-bottom: 7px;
+            i {
+                font-size: 26px;
+            }
+        }
+        .contact {
+            font-size: 20px;
+            margin-bottom: 32px;
+            .phone {
+                font-size: 21px;
+            }
+        }
+        .map {
+            margin-bottom: 48px;
+        }
+        .h2 {
+            margin: 0 0 21px;
+            font-size: 32px;
+            i {
+                font-size: 26px;
+                width: 56px;
+                text-align: center;
+            }
+        }
+    }
 }
-@media (max-width: 1400px) {}
+@media (max-width: 1400px) {
+    #map {
+        width: 70%;
+    }
+}
 @media (max-width: 1280px) {}
 @media (max-width: 1200px) {
     .top-contact-item {
         margin: 0 5%;
     }
-    .footer-contact .item .title{
+    .footer-contact .item .title {
         font-size: 20px;
     }
-    .footer-nav ul li{
+    .footer-nav ul li {
         font-size: 18px;
     }
 }
@@ -235,7 +293,6 @@
         }
     }
     .contact-block {
-        margin: 50px auto;
         .heading {
             text-align: center;
         }
@@ -299,8 +356,26 @@
     .r-nav {
         display: none;
     }
+    .left-content {
+        min-height: inherit;
+    }
 }
 @media (max-width: 767px) {
+    .map-wrap {
+        #map {
+            width: 100%;
+        }
+        .contact-block {
+            position: static;
+            max-width: 460px;
+            width: inherit;
+            margin: 0 auto;
+            height: inherit;
+            padding: 20px 15px;
+            margin: 50px 0;
+            box-shadow: none;
+        }
+    }
     .mobile-nav {
         border-top: solid 1px #f0f3f7;
     }
@@ -479,8 +554,56 @@
         font-size: 16px;
         color: #b5beca;
     }
+    .shema-item {
+        .contact {
+            margin-bottom: 20px;
+            .phone {
+                font-size: 21px;
+                display: block;
+                margin-top: 4px;
+            }
+        }
+        .map {
+            display: none;
+        }
+        .text-inner {
+            display: none;
+        }
+        .btns {
+            .btn {
+                font-size: 15px;
+                &:first-child {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #map2 {
+        height: 230px;
+    }
+    .shema-map {
+        margin-bottom: 36px;
+    }
+    .shema-list .shema-item {
+        margin-bottom: 40px;
+    }
 }
 @media (max-width: 480px) {
+    .modal-body {
+        .shema-item {
+            .phone {
+                display: none;
+            }
+            .h2 {
+                font-size: 18px;
+                font-weight: 500;
+                i {
+                    font-size: 14px;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
     .zp-phone {
         font-size: 18px;
     }
