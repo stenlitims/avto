@@ -19,13 +19,14 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
 
     <div class="wrap">
         <header class="header">
-            <div class="mob-head-line visible-xs-block clearfix">
+            <div class="mob-head-line visible-xs-block visible-sm-block clearfix">
                 <a href="" class="btn btn-def" data-toggle="modal" data-target="#call2">ПОЗВОНИТЬ</a>
                 <div class="open-nav" data-toggle=".main-nav-wrap">
                     <span></span>
@@ -74,7 +75,7 @@
                 </div>
             </div>
             <div class="main-nav-wrap">
-                <div class="close-nav visible-xs-block">
+                <div class="close-nav visible-xs-block visible-sm-block">
                     <i class="icon-close"></i>
                 </div>
                 <div class="container-fluid">
@@ -102,7 +103,7 @@
                             <li><a href="#">СХЕМА ПРОЕЗДА</a></li>
                         </ul>
                         <div class="r-btn">
-                            <a href="" class="btn btn-line" data-toggle="modal" data-target="#call">ОБРАТНЫЙ ЗВОНОК</a>
+                            <a href="" class="btn btn-def" data-toggle="modal" data-target="#call">ОБРАТНЫЙ ЗВОНОК</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +165,7 @@
                                 <a href="" class="btn btn-def">ПОЗВОНИТЬ</a>
                             </div>
                             <div class="map">
-
+                                <div id="map-voloko"></div>
                             </div>
                             <div class="text-inner">
                                 <div class="h2"><i class="icon-route_car"></i>Описание маршрута на автомобиле</div>
@@ -300,14 +301,14 @@
             </div>
         </div>
     </div>
-    
-    
 
 
 
 
 
-    <script src="js/jquery.min.js"></script>
+
+
+
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>

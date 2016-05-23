@@ -21,24 +21,26 @@ function addModal(content, id) {
     $('body').append(tplModal);
 }
 
+function marginNav() {
+    var hei = $('.sub-nav.open').height() + parseInt($('.inner-page').css('marginTop'));
+    $('.main-nav-wrap').css('marginBottom', hei);
+}
+
 
 $(document).ready(function () {
-    marginCotainer();
-    $(window).resize(function () {
+    if ($('.map-wrap .contact-block').length > 0) {
         marginCotainer();
-    });
-
-
-    if ($('.shema-item').length > 0) {
-        var shemaModal = 'shema-modal';
-        addModal('', shemaModal);
-        $(document).on('click', '.js-shema', function () {
-            var id = $(this).data('id'),
-                content = '<div class="shema-item">' + $('#' + id).html() + '</div>';
-            $('#' + shemaModal + ' .modal-body').html(content);
-            $('#' + shemaModal).modal('show');
+        $(window).resize(function () {
+            marginCotainer();
         });
     }
+    if ($('.sub-nav.open').length > 0) {
+        marginNav();
+        $(window).resize(function () {
+            marginNav();
+        });
+    }
+
 
     if ($('a[href="#"]').length > 0) {
         $(document).on('click', 'a[href="#"]', function () {
@@ -100,7 +102,7 @@ $(document).ready(function () {
     }
 
 
-    $(document).on('click', '.main-nav > ul > li > a', function(){
+    $(document).on('click', '.main-nav > ul > li > a', function () {
         $(this).parent().toggleClass('activen');
     });
 

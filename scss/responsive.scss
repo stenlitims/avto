@@ -118,10 +118,33 @@
         }
     }
 }
-@media all and (max-width: 1200px) and (min-width: 768px) {}
+@media all and (max-width: 1200px) and (min-width: 991px) {
+    .sub-nav {
+        a {
+            height: 110px;
+            .ico {
+                font-size: 40px;
+                height: 56px;
+                .icon-6,
+                .icon-5 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1400px) {
+    #map {
+        height: 520px;
+    }
+    .map-wrap .contact-block {
+        padding: 10px 60px 60px;
+    }
+    .big-image {
+        margin-bottom: 50px;
+    }
     .consult-block {
-        padding: 100px 0;
+        padding: 80px 0 100px;
         margin-bottom: 70px;
     }
     .list-car-grag {
@@ -132,11 +155,16 @@
     }
     .sub-nav {
         a {
-            font-size: 16px;
-            height: 160px;
+            font-size: 18px;
+            height: 166px;
             .ico {
+                height: 103px;
                 font-size: 70px;
                 padding-top: 15px;
+                .icon-6,
+                .icon-5 {
+                    font-size: 60px;
+                }
             }
         }
     }
@@ -153,7 +181,7 @@
         }
     }
     .heading {
-        font-size: 38px;
+        font-size: 42px;
         margin-bottom: 43px;
         &.line {
             padding-bottom: 25px;
@@ -162,11 +190,12 @@
     .consult-block {
         font-size: 20px;
         .phones {
-            font-size: 50px;
+            font-size: 42px;
         }
         .btn {
-            font-size: 24px;
-            margin-top: 36px;
+            font-size: 22px;
+            margin-top: 24px;
+            padding: 10px 20px;
         }
         p {
             max-width: 600px;
@@ -244,6 +273,49 @@
                 text-align: center;
             }
         }
+    }
+    .r-sidebar .contact-block {
+        max-width: inherit;
+        .heading {
+            margin-bottom: 26px;
+            font-size: 34px;
+        }
+        .btn {
+            font-size: 19px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+    }
+    .inner-page {
+        margin-bottom: 100px;
+    }
+    .adr-list a {
+        .title {
+            font-size: 21px;
+        }
+        .text {
+            font-size: 18px;
+        }
+    }
+    .footer-contact .item .phone {
+        font-size: 17px;
+    }
+    .world-v-list {
+        .text {
+            font-size: 16px;
+            .title {
+                font-size: 19px;
+            }
+        }
+    }
+    .r-nav {
+        width: 310px;
+        li {
+            font-size: 22px;
+        }
+    }
+    .zp-form textarea {
+        height: 140px;
     }
 }
 @media (max-width: 1400px) {
@@ -359,58 +431,10 @@
     .left-content {
         min-height: inherit;
     }
-}
-@media (max-width: 767px) {
-    .map-wrap {
-        #map {
-            width: 100%;
-        }
-        .contact-block {
-            position: static;
-            max-width: 460px;
-            width: inherit;
-            margin: 0 auto;
-            height: inherit;
-            padding: 20px 15px;
-            margin: 50px 0;
-            box-shadow: none;
-        }
-    }
-    .mobile-nav {
-        border-top: solid 1px #f0f3f7;
-    }
-    .world-v-list {
-        padding-top: 0;
-    }
-    .sub-nav,
-    .service-nav {
-        li {
-            a {
-                height: inherit;
-                font-size: 12px;
-                .ico {
-                    font-size: 40px;
-                    margin-bottom: 8px;
-                    i {
-                        margin-top: 8px;
-                    }
-                }
-            }
-        }
-    }
-    .service-block {
-        margin-bottom: 20px;
-        .service-nav {
-            margin: 0 -16px;
-        }
-        .heading {
-            margin-bottom: 17px;
-        }
-    }
     .header {
         z-index: inherit;
         position: static;
-        padding-top: 0;
+        padding-top: 69px;
         margin-bottom: 20px;
         &:before {
             visibility: hidden;
@@ -449,7 +473,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        margin: 0;
+        margin: 0 !important;
         border: none;
         background-color: #062f58;
         box-shadow: -10px 2px 4px 0 rgba(0, 0, 0, 0.34);
@@ -481,7 +505,9 @@
                     font-size: 24px;
                     color: #fdfdfd;
                     font-weight: normal;
-                    &:hover {}
+                    &:hover {
+                        color: #4172ba;
+                    }
                 }
             }
         }
@@ -509,6 +535,9 @@
         right: 18px;
         color: #fff;
         font-size: 28px;
+        &:hover {
+            color: #4172ba;
+        }
     }
     .call .modal-dialog {
         margin-left: auto;
@@ -517,6 +546,59 @@
     }
     .main-nav-wrap {
         width: 50%;
+    }
+    .service-block {
+        margin-bottom: 20px;
+        .service-nav {
+            margin: 0 -16px;
+        }
+        .heading {
+            margin-bottom: 17px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .map-wrap {
+        #map {
+            width: 100%;
+        }
+        .contact-block {
+            position: static;
+            max-width: 460px;
+            width: inherit;
+            height: inherit;
+            padding: 20px 15px;
+            margin: 50px auto;
+            box-shadow: none;
+        }
+    }
+    .mobile-nav {
+        border-top: solid 1px #f0f3f7;
+    }
+    .world-v-list {
+        padding-top: 0;
+    }
+    .sub-nav,
+    .service-nav {
+        li {
+            a {
+                height: inherit;
+                font-size: 12px;
+                .ico {
+                    font-size: 40px;
+                    margin-bottom: 8px;
+                    height: 50px;
+                    .icon-5,
+                    .icon-6 {
+                        font-size: 30px;
+                        margin-top: 10px;
+                    }
+                    i {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
     }
     .heading {
         text-align: center;
@@ -586,6 +668,9 @@
     }
     .shema-list .shema-item {
         margin-bottom: 40px;
+    }
+    .world-v-list .item {
+        max-width: inherit;
     }
 }
 @media (max-width: 480px) {
